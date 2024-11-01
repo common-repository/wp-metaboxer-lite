@@ -1,0 +1,554 @@
+.mtbxr-meta-box .inside{
+    padding:0;
+}
+.mtbxr-field {
+    padding: 10px 10px 20px;
+    border-bottom: 1px solid #DFDFDF;
+    position:relative;
+}
+.mtbxr-field-last{
+    border:0;
+}
+.mtbxr-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+label.mtbxr-radio{
+    display:inline;
+    font-weight:normal;
+}
+.mtbxr-textbox,
+.mtbxr-textarea{
+    display: block;
+    margin-bottom: 3px;
+    min-width: 60%;
+}
+.mtbxr-field select{
+    display: block;
+    margin-bottom: 3px;
+}
+.mtbxr-textarea{
+    min-height:100px;
+}
+.mtbxr-field .note {
+    color: #666666;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 11px;
+}
+.mtbxr-value-delete{
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+.mtbxr-value-delete input{
+    margin:0 0 0 4px;
+}
+
+
+/*** Date ***/
+#ui-datepicker-div{
+    display:none;
+}
+.ui-datepicker-trigger{
+    vertical-align: middle;
+}
+.mtbxr-field select.mtbxr-date-month{
+    display:inline;
+    width:auto;
+}
+.mtbxr-field input[type="text"].mtbxr-date-day {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+.mtbxr-field input[type="text"].mtbxr-date-year {
+    display:inline;
+    min-width:0;
+    width:50px;
+}
+.ui-datepicker-trigger{
+    display:inline-block;
+    width:16px;
+    height:15px;
+    text-indent:-99999px;
+    font-size:0;
+    line-height:0;
+    border:0;
+    cursor:pointer;
+    background: url(../images/calendar.gif) no-repeat;
+}
+/*** end Date ***/
+
+
+/*** Time ***/
+.mtbxr-field select.mtbxr-time-hour,
+.mtbxr-field select.mtbxr-time-meridiem{
+    display:inline;
+    width:auto;
+}
+.mtbxr-field input[type="text"].mtbxr-time-day {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+.mtbxr-field input[type="text"].mtbxr-time-minute {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+.mtbxr-field input[type="text"].mtbxr-time-second {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+
+/*** Datetime ***/
+.mtbxr-field select.mtbxr-datetime-month,
+.mtbxr-field select.mtbxr-datetime-hour,
+.mtbxr-field select.mtbxr-datetime-meridiem{
+    display:inline;
+    width:auto;
+}
+.mtbxr-field input[type="text"].mtbxr-datetime-day {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+.mtbxr-field input[type="text"].mtbxr-datetime-year {
+    display:inline;
+    min-width:0;
+    width:50px;
+}
+.mtbxr-field input[type="text"].mtbxr-datetime-minute {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+.mtbxr-field input[type="text"].mtbxr-datetime-second {
+    display:inline;
+    min-width:0;
+    width:30px;
+}
+
+/*** Sortable Images ***/
+.mtbxr-sortable-images{
+    margin-bottom:2px;
+}
+.mtbxr-placeholder-image,
+.mtbxr-sortable-image{
+    float:left;
+    width:100px;
+    height:100px;
+    margin:0 10px 10px 0;
+}
+.mtbxr-sortable-image{
+    border:1px solid #ccc;
+    cursor: move;
+    position:relative;
+    overflow:hidden;
+}
+.mtbxr-add-image{
+    margin-bottom:10px;
+}
+.mtbxr-placeholder-image{
+    border:1px dashed #ccc;
+}
+.mtbxr-sortable-image-skeleton{
+    display:none;
+}
+.mtbxr-sortable-image input[type=text]{
+    padding:0;
+    margin:0;
+    width:50%;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+.mtbxr-image-action{
+    position:absolute;
+    right:0;
+    top:0;
+    background:#fff;
+    cursor:default;
+    padding:3px 5px;
+    opacity:0.8;
+}
+
+
+/*** Sortable Files ***/
+.mtbxr-sortable-files{
+    margin-bottom:2px;
+}
+.mtbxr-placeholder-file,
+.mtbxr-sortable-file{
+
+    margin:0 10px 10px 0;
+}
+.mtbxr-sortable-file{
+    border:1px solid #ccc;
+    position:relative;
+    overflow:hidden;
+    padding-left:20px;
+}
+.mtbxr-sortable-file p{
+    margin:5px 0;
+}
+.mtbxr-add-file{
+    margin-bottom:10px;
+}
+.mtbxr-placeholder-file{
+    border:1px dashed #ccc;
+}
+.mtbxr-sortable-file-skeleton{
+    display:none;
+}
+.mtbxr-sortable-file input[type=text]{
+    padding:0;
+    margin:0;
+    width:50%;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+.mtbxr-file-action{
+    position:absolute;
+    right:0;
+    top:0;
+    background:#fff;
+    cursor:default;
+    padding:3px 5px;
+    opacity:0.8;
+}
+.mtbxr-file-drag{
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    width:8px;
+    height:20px;
+    display:block;
+    cursor:move;
+}
+.mtbxr-file-drag span{
+    width:3px;
+    height:3px;
+    position:absolute;
+    background:#dfdfdf;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    -webkit-border-radius:3px; /* Safari and chrome */
+    border-radius:3px; /* CSS3 */
+}
+.mtbxr-file-drag span.dot1{
+    left:2px;
+    top:2px;
+}
+.mtbxr-file-drag span.dot2{
+    left:2px;
+    top:8px;
+}
+.mtbxr-file-drag span.dot3{
+    left:2px;
+    top:14px;
+}
+
+
+/*** Sortable Textareas ***/
+.mtbxr-sortable-textareas{
+    margin-bottom:2px;
+}
+.mtbxr-textarea-placeholder,
+.mtbxr-sortable-textarea{
+    margin:0 10px 10px 0;
+}
+.mtbxr-textarea-placeholder{
+    border:1px dashed #ccc;
+}
+.mtbxr-sortable-textarea{
+    border:1px solid #ccc;
+    position:relative;
+    overflow:hidden;
+    padding:5px 0 5px 20px;
+}
+.mtbxr-textarea-add{
+    margin-bottom:10px;
+}
+.mtbxr-sortable-textarea-skeleton{
+    display:none;
+}
+.mtbxr-sortable-textarea textarea{
+    width:60%;
+}
+.mtbxr-textarea-action{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-8px;
+    cursor:default;
+    padding:0 5px;
+}
+.mtbxr-textarea-drag{
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    width:8px;
+    height:20px;
+    display:block;
+    cursor:move;
+}
+.mtbxr-textarea-drag span{
+    width:3px;
+    height:3px;
+    position:absolute;
+    background:#dfdfdf;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    -webkit-border-radius:3px; /* Safari and chrome */
+    border-radius:3px; /* CSS3 */
+}
+.mtbxr-textarea-drag span.dot1{
+    left:2px;
+    top:2px;
+}
+.mtbxr-textarea-drag span.dot2{
+    left:2px;
+    top:8px;
+}
+.mtbxr-textarea-drag span.dot3{
+    left:2px;
+    top:14px;
+}
+
+
+/*** Sortable Textboxes ***/
+.mtbxr-sortable-textboxes{
+    margin-bottom:2px;
+}
+.mtbxr-textbox-placeholder,
+.mtbxr-sortable-textbox{
+    margin:0 10px 10px 0;
+}
+.mtbxr-textbox-placeholder{
+    border:1px dashed #ccc;
+}
+.mtbxr-sortable-textbox{
+    border:1px solid #ccc;
+    position:relative;
+    overflow:hidden;
+    padding:5px 0 5px 20px;
+}
+.mtbxr-textbox-add{
+    margin-bottom:10px;
+}
+.mtbxr-sortable-textbox-skeleton{
+    display:none;
+}
+.mtbxr-sortable-textbox input[type=text]{
+    width:60%;
+}
+.mtbxr-textbox-action{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-8px;
+    cursor:default;
+    padding:0 5px;
+}
+.mtbxr-textbox-drag{
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    width:8px;
+    height:20px;
+    display:block;
+    cursor:move;
+}
+.mtbxr-textbox-drag span{
+    width:3px;
+    height:3px;
+    position:absolute;
+    background:#dfdfdf;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    -webkit-border-radius:3px; /* Safari and chrome */
+    border-radius:3px; /* CSS3 */
+}
+.mtbxr-textbox-drag span.dot1{
+    left:2px;
+    top:2px;
+}
+.mtbxr-textbox-drag span.dot2{
+    left:2px;
+    top:8px;
+}
+.mtbxr-textbox-drag span.dot3{
+    left:2px;
+    top:14px;
+}
+
+
+/*** Vimeo Textboxes ***/
+.mtbxr-vimeo-videos{
+    margin-bottom:2px;
+}
+.mtbxr-vimeo-placeholder,
+.mtbxr-vimeo-video{
+    margin:0 10px 10px 0;
+}
+.mtbxr-vimeo-placeholder{
+    border:1px dashed #ccc;
+}
+.mtbxr-vimeo-video{
+    border:1px solid #ccc;
+    position:relative;
+    overflow:hidden;
+    padding:5px 0 5px 20px;
+}
+.mtbxr-vimeo-add{
+    margin-bottom:10px;
+}
+.mtbxr-vimeo-skeleton{
+    display:none;
+}
+.mtbxr-vimeo-video input[type=text]{
+    width:50%;
+}
+.mtbxr-vimeo-action{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-8px;
+    cursor:default;
+    padding:0 5px;
+}
+.mtbxr-vimeo-drag{
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    width:8px;
+    height:20px;
+    display:block;
+    cursor:move;
+}
+.mtbxr-vimeo-drag span{
+    width:3px;
+    height:3px;
+    position:absolute;
+    background:#dfdfdf;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    -webkit-border-radius:3px; /* Safari and chrome */
+    border-radius:3px; /* CSS3 */
+}
+.mtbxr-vimeo-drag span.dot1{
+    left:2px;
+    top:2px;
+}
+.mtbxr-vimeo-drag span.dot2{
+    left:2px;
+    top:8px;
+}
+.mtbxr-vimeo-drag span.dot3{
+    left:2px;
+    top:14px;
+}
+.mtbxr-vimeo-preview {
+    display:block;
+    width:120px;
+    height:90px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:3px;
+    background: url(../images/loader.gif) no-repeat center;
+}
+.mtbxr-vimeo-preview img {
+    width:100%;
+}
+.mtbxr-vimeo-url.push{
+    margin-top:30px;
+}
+
+
+/*** Youtube Textboxes ***/
+.mtbxr-youtube-videos{
+    margin-bottom:2px;
+}
+.mtbxr-youtube-placeholder,
+.mtbxr-youtube-video{
+    margin:0 10px 10px 0;
+}
+.mtbxr-youtube-placeholder{
+    border:1px dashed #ccc;
+}
+.mtbxr-youtube-video{
+    border:1px solid #ccc;
+    position:relative;
+    overflow:hidden;
+    padding:5px 0 5px 20px;
+}
+.mtbxr-youtube-add{
+    margin-bottom:10px;
+}
+.mtbxr-youtube-skeleton{
+    display:none;
+}
+.mtbxr-youtube-video input[type=text]{
+    width:50%;
+}
+.mtbxr-youtube-action{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-8px;
+    cursor:default;
+    padding:0 5px;
+}
+.mtbxr-youtube-drag{
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+    width:8px;
+    height:20px;
+    display:block;
+    cursor:move;
+}
+.mtbxr-youtube-drag span{
+    width:3px;
+    height:3px;
+    position:absolute;
+    background:#dfdfdf;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    -webkit-border-radius:3px; /* Safari and chrome */
+    border-radius:3px; /* CSS3 */
+}
+.mtbxr-youtube-drag span.dot1{
+    left:2px;
+    top:2px;
+}
+.mtbxr-youtube-drag span.dot2{
+    left:2px;
+    top:8px;
+}
+.mtbxr-youtube-drag span.dot3{
+    left:2px;
+    top:14px;
+}
+.mtbxr-youtube-preview {
+    display:block;
+    width:120px;
+    height:90px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:3px;
+    background: url(../images/loader.gif) no-repeat center;
+}
+.mtbxr-youtube-url.push{
+    margin-top:30px;
+}

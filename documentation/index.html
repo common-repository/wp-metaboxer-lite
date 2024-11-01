@@ -1,0 +1,1093 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>WP Metaboxer - WordPress metabox builder plugin</title>
+	
+	<meta name="description" content="Create WordPress metaboxes with ease. Provides an easy to use interface for building metaboxes with many field types to choose from.">
+	<meta name="author" content="Nico Amarilla">
+	<meta name="copyright" content="Nico Amarilla">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-10-14T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushPhp.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#2461BD;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#adding_a_metabox">Adding a MetaBox</a></li>
+			<li><a href="#adding_fields">Adding Fields</a></li>
+			<li><a href="#working_with_fields">Working With Fields</a></li>
+			<li><a href="#accessing_your_data">Accessing Your Data</a></li>
+			<li><a href="#field_settings_reference">Field Settings Reference</a></li>
+			<li><a href="#field_type_reference">Field Type Reference</a></li>
+			<li><a href="#filters">Filters</a></li>
+			<li><a href="#utility_functions">Utility Functions</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Nico Amarilla 2012<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>WP Metaboxer</h1><h2>WordPress metabox builder plugin</h2><hr><ul><li>Created: 03/10/2011</li><li>latest Update: 10/14/2012</li><li>By: Nico Amarilla</li><li><a href=""></a></li><li>Email: <a href="mailto:&#107;&#111;&#115;&#105;&#110;&#105;&#120;&#64;&#99;&#111;&#100;&#101;&#102;&#108;&#101;&#101;&#116;&#46;&#110;&#101;&#116;">&#107;&#111;&#115;&#105;&#110;&#105;&#120;&#64;&#99;&#111;&#100;&#101;&#102;&#108;&#101;&#101;&#116;&#46;&#110;&#101;&#116;</a></li></ul><p>Create WordPress metaboxes with ease. Provides an easy to use interface for building metaboxes with many field types to choose from.</p></section><section id="introduction">
+	<h3>Introduction</h3><hr class="notop">
+<p>
+	Create WordPress metaboxes with ease. Provides an easy to use interface for building metaboxes with many field types to choose from.</p>
+<p>
+	<strong>Features:</strong></p>
+<ul>
+	<li>
+		Easy to use interface for creating metaboxes and custom fields.</li>
+	<li>
+		Metabox can be added to Post, Page or Custom Posts.</li>
+	<li>
+		Metabox position is configurable.</li>
+	<li>
+		Metabox priority is configurable.</li>
+	<li>
+		Textboxes, Textareas and Sortable textboxes can be set to allow/disallow HTML or accept raw data.</li>
+	<li>
+		Selectboxes, Radio, and Checkbox Group can use a data source to get their options. A data source is a callable user defined function that returns an array of value and texts.</li>
+	<li>
+		Add unlimited number of images by using Sortable Image field. The order can be changed via drag and drop.</li>
+	<li>
+		Add unlimited number of files by using Sortable File field. The order can be changed via drag and drop.</li>
+	<li>
+		Add unlimited number of textboxes by using Sortable Textbox field. The order can be changed via drag and drop.</li>
+	<li>
+		Utility functions for fetching the custom field values.</li>
+	<li>
+		Ability to export the metaboxes and include it in your theme without the need for the plugin.</li>
+</ul>
+<p>
+	<strong>The following field types are available:</strong></p>
+<ul>
+	<li>
+		Textbox</li>
+	<li>
+		Textarea</li>
+	<li>
+		Selectbox</li>
+	<li>
+		Checkbox</li>
+	<li>
+		Radio</li>
+	<li>
+		Date</li>
+	<li>
+		Time</li>
+	<li>
+		Datetime</li>
+	<li>
+		Checkbox Group</li>
+	<li>
+		Sortable Images</li>
+	<li>
+		Sortable Files</li>
+	<li>
+		Sortable Textboxes</li>
+	<li>
+		Youtube Videos</li>
+	<li>
+		Vimeo Videos</li>
+</ul>
+</section>
+<section id="installation">
+	<h3>Installation</h3><hr class="notop">
+<p>
+	Install via WordPress Admin</p>
+<ol>
+	<li>
+		Ready the zip file of the plugin</li>
+	<li>
+		Go to Admin &gt; Plugins &gt; Add New</li>
+	<li>
+		On the upper portion click the Upload link</li>
+	<li>
+		Using the file upload field, upload the plugin zip file here and activate the plugin</li>
+</ol>
+<p>
+	Install via FTP</p>
+<ol>
+	<li>
+		First unzip the plugin file</li>
+	<li>
+		Using FTP go to your server&#39;s wp-content/plugins directory</li>
+	<li>
+		Upload the unzipped plugin here</li>
+	<li>
+		Once finished login into your WP Admin and go to Admin &gt; Plugins</li>
+	<li>
+		Look for WP Metaboxer and activate it</li>
+</ol>
+<p>
+	&nbsp;</p>
+</section>
+<section id="adding_a_metabox">
+	<h3>Adding a MetaBox</h3><hr class="notop">
+<p>
+	The steps for adding a metabox is simple and straightforward. It is similar to adding a WordPress post or page.&nbsp;Below are steps to add a metabox:</p>
+<ol>
+	<li>
+		Go to Admin &gt; WP Metaboxer.</li>
+	<li>
+		Click &quot;Add Metabox&quot;. You will be taken to the Add New Metabox screen.</li>
+	<li>
+		In the title area type the name of your metabox.</li>
+	<li>
+		On the right side, look for the &quot;Properties&quot; panel.</li>
+	<li>
+		In the &quot;Properties&quot; panel choose in what admin area would you like to show the metabox.
+		<ol>
+			<li>
+				<strong>Page </strong>- Show your metabox when adding or editing a page in Admin &gt; Pages</li>
+			<li>
+				<strong>Post - </strong>Show your metabox when adding or editing a post in Admin &gt; Posts</li>
+			<li>
+				<strong>[Custom Posts] - </strong>The options here will depend on what other custom posts your site is using.</li>
+		</ol>
+	</li>
+	<li>
+		Now choose your &quot;Metabox Position&quot;. The default value should be ok no need to change it.</li>
+	<li>
+		Choose your &quot;Metabox Priority&quot;.&nbsp;The default value should also be ok.</li>
+	<li>
+		Thats it! Now click &quot;Publish&quot;.</li>
+</ol>
+<p>
+	To check your newly added metabox, go to Admin &gt; Pages &gt; Add New if you checked Page in the Properties panel. If you checked Post then go to Admin &gt; Posts &gt; Add New. You should now see your metabox with the title that you specified.&nbsp;</p>
+<p>
+	However, the metabox has no fields yet. To add fields, head over to the Adding Fields section.</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="adding_fields">
+	<h3>Adding Fields</h3><hr class="notop">
+<p>
+	Note: If you have not created a metabox yet, please check the <a href="#adding_a_metabox">Adding a Metabox </a>section.</p>
+<p>
+	In this example we will be adding a Textbox and Textarea to our metabox.</p>
+<ol>
+	<li>
+		Inside the metabox builder screen, click the <strong>Textbox </strong>button.</li>
+	<li>
+		A new box with a name &quot;Textbox&quot; will appear.</li>
+	<li>
+		Now add a &quot;Label&quot; for the textbox. As the name implies, it will serve as a label for your field. For example: My Sample Textbox</li>
+	<li>
+		Now add a &quot;Unique Key&quot;. WP Metaboxer will automatically suggest a Unique Key based on the Label. You can change it if you like. Note: unique keys can only have alphanumeric and underscore characters.</li>
+	<li>
+		Thats it! You can hit Update button and see your Textbox field in action.</li>
+</ol>
+<p>
+	Note: Textboxes and other fields have additional options that can be accessed by clicking &quot;More Settings&quot; in a fields box. For more info on what these options are, check the <a href="#field_settings_reference">Field Settings Referrence</a> section.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Adding a Textarea</p>
+<ol>
+	<li>
+		Inside the metabox builder screen, click the <strong>Textarea </strong>button.</li>
+	<li>
+		A new box with a name &quot;Textarea&quot; will appear.</li>
+	<li>
+		Now add a &quot;Label&quot; for the textbox. As the name implies, it will serve as a label for your field. For example: My Sample Textarea</li>
+	<li>
+		Now add a &quot;Unique Key&quot;. WP Metaboxer will automatically suggest a Unique Key based on the Label. You can change it if you like. Note: unique keys can only have alphanumeric and underscore characters.</li>
+	<li>
+		Thats it! You can hit Update button and see your Textarea field in action.</li>
+</ol>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="assets/images/image_1.jpg"></p>
+<p>
+	WP Metaboxer in Action</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="working_with_fields">
+	<h3>Working With Fields</h3><hr class="notop">
+<p>
+	Whereas the previous sections refer to the WP Metaboxer&#39;s builder screen, this section refers to the actual usage of your custom metabox and custom fields inside the Post or Page edit screen.</p>
+<p>
+	Note: If you have not added the fields yet, please check the <a href="#adding_fields">Adding Fields </a>section.</p>
+<p>
+	&nbsp;</p>
+<p>
+	To add data to your custom fields:</p>
+<ol>
+	<li>
+		In the Page/Post edit screen, look for the metabox that you have added.</li>
+	<li>
+		Add the data for the textbox. Eg. &quot;Hello world!&quot;</li>
+	<li>
+		Add the data for the textarea. Eg. &quot;Hello universe!&quot;</li>
+	<li>
+		Click Update. Thats it!</li>
+</ol>
+<p>
+	<img alt="" src="assets/images/image_2.jpg"></p>
+<p>
+	Custom Metabox With Fields and Data</p>
+<p>
+	&nbsp;</p>
+<h4>
+	Using the Sortable Images</h4>
+<p>
+	This field uses WordPress Media Uploader. To add an image:</p>
+<ol>
+	<li>
+		Click the Add Image button.</li>
+	<li>
+		The WordPress Media Uploader pop-up form will appear.
+		<ol>
+			<li>
+				Upload from computer
+				<ol>
+					<li>
+						To add an image from your computer click Select Files button</li>
+					<li>
+						Choose the image(s) you want to upload.</li>
+					<li>
+						When the upload is done, click Insert to Metabox button</li>
+				</ol>
+			</li>
+			<li>
+				Add from Media Library
+				<ol>
+					<li>
+						On the Media Uploader pop-up form, click the &quot;Media Library&quot; tab</li>
+					<li>
+						Inside this tab, click &quot;Show&quot; for the image you wish to add.</li>
+					<li>
+						Click the Insert to Metabox button</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>
+		Repeat steps to add more images</li>
+</ol>
+<p>
+	&nbsp;</p>
+<h4>
+	Using the Sortable Files</h4>
+<ol>
+	<li>
+		Click the Add File button.</li>
+	<li>
+		The WordPress Media Uploader pop-up form will appear.
+		<ol>
+			<li>
+				Upload from computer
+				<ol>
+					<li>
+						To add a file from your computer click Select Files button</li>
+					<li>
+						Choose the file(s) you want to upload.</li>
+					<li>
+						When the upload is done, click Insert to Metabox button</li>
+				</ol>
+			</li>
+			<li>
+				Add from Media Library
+				<ol>
+					<li>
+						On the Media Uploader pop-up form, click the &quot;Media Library&quot; tab</li>
+					<li>
+						Inside this tab, click &quot;Show&quot; for the file you wish to add.</li>
+					<li>
+						Click the Insert to Metabox button</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>
+		Repeat steps to add more files</li>
+</ol>
+<p>
+	&nbsp;</p>
+<h4>
+	Using the Sortable Textboxes</h4>
+<ol>
+	<li>
+		Click Add Textbox.</li>
+	<li>
+		Type data inside the textboxes similar to a regular textbox.</li>
+	<li>
+		Repeat step 1 to add more.</li>
+</ol>
+<p>
+	&nbsp;</p>
+<h4>
+	Using the Vimeo and Youtube Fields</h4>
+<ol>
+	<li>
+		Click the Add Vimeo Video or Add Youtube Video.</li>
+	<li>
+		Paste the url of the video in the textbox. Examples:<br>
+		<ol>
+			<li>
+				For Youtube: http://www.youtube.com/watch?v=PNZXXqmc-KA</li>
+			<li>
+				For Vimeo: http://vimeo.com/29144891</li>
+		</ol>
+	</li>
+	<li>
+		Repeat to add more videos</li>
+</ol>
+<p>
+	WP Metaboxer will fetch the thumbnail for the videos. Invalid urls will have no thumbnails returned.</p>
+<p>
+	&nbsp;</p>
+<h4>
+	Deleting a Custom Field&#39;s Data</h4>
+<p>
+	Each field has a &quot;Delete&quot; checkbox at the right side. Check it on every field you wish to delete and click Update. This will delete the custom field data from the database.</p>
+<p>
+	Note: For selectboxes, it is important to add a blank option (option with value set to nothing) if you want its data to remain deleted on every Post/Page save.</p>
+</section>
+<section id="accessing_your_data">
+	<h3>Accessing Your Data</h3><hr class="notop">
+<p>
+	This section describes how to access the data from the custom fields. It assumes you have a good understanding of WordPress themes and PHP.</p>
+<p>
+	WP Metaboxer utilizes WordPress <a href="http://codex.wordpress.org/Custom_Fields">Custom Fields API</a>. WP Metaboxer provides two utility functions:</p>
+<p>
+	mtbxr_val - Get a single field&#39;s value by passing the Unique Key. Returns whatever value is saved for a field.</p>
+<p>
+	mtbxr_all - Get all fields from a post. Returns an array of values.</p>
+<p>
+	&nbsp;</p>
+<h4>
+	Function mtbxr_val</h4>
+<p>
+	Using mtbxr_val, pass the field&#39;s Unique Key. For example, inside the WordPress loop, you can do this:</p>
+<pre class="brush: php">
+$my_textbox_value = mtbxr_val(&quot;my_textbox&quot;);
+echo $my_textbox_value;
+
+</pre>
+<p>
+	Optionally, you can specify the ID of a post. It is handy if you are using it outside the WordPress Loop:</p>
+<pre class="brush: php">
+$my_textbox_value = mtbxr_val(&quot;my_textbox&quot;, $post_id);
+echo $my_textbox_value;
+
+</pre>
+<p>
+	&nbsp;</p>
+<h4>
+	Function mtbxr_all</h4>
+<p>
+	The mtbxr_all on the other hand will return an array of values of all custom fields associated with a post:</p>
+<pre class="brush: php">
+$my_fields = mtbxr_all();
+$my_textbox_value = $my_fields[&#39;my_textbox&#39;];
+</pre>
+<p>
+	The advantage of mtbxr_all is you only need to call this function once to get all the field values.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Note: Since WP Metaboxer is using Custom Fields API you can still use the built-in WP functions like: <a href="http://codex.wordpress.org/Function_Reference/get_post_meta">get_post_meta</a> and <a href="http://codex.wordpress.org/Function_Reference/get_post_custom">get_post_custom</a>. However mtbxr_all, compared to get_post_custom, will simplify the array and will automatically unserialize the values for you.</p>
+<h3>
+	&nbsp;</h3>
+<h4>
+	Function mtbxr_video</h4>
+<p>
+	This function applies only to Youtube and Vimeo fields.&nbsp; It will display the video in embedded format. That means it will show the video and its player in your page as if the video was embedded in your page.</p>
+<p>
+	To use it you need to pass along the Unique Key of your field. For example inside your template file:</p>
+<pre class="brush: php">
+echo mtbxr_video(&#39;vimeo_sample&#39;);
+</pre>
+<p>
+	&nbsp;</p>
+<p>
+	Since the Youtube and Vimeo fields are stored as an array, by default it will return the first video associated with the custom field. To specify a different video, use the index parameter. The index starts at 0.</p>
+<p>
+	Example - Display first video:</p>
+<pre class="brush: php">
+echo mtbxr_video(&#39;vimeo_sample&#39;, 0);</pre>
+<p>
+	Example - Display second video:</p>
+<pre class="brush: php">
+echo mtbxr_video(&#39;vimeo_sample&#39;, 1);</pre>
+<p>
+	&nbsp;</p>
+<h4>
+	Function mtbxr_videos</h4>
+<p>
+	This function applies only to Youtube and Vimeo fields.&nbsp; It will return an array of videos in embedded format. You can use a loop to display the videos.</p>
+<pre class="brush: php">
+if($youtube_videos = mtbxr_videos(&#39;youtube_sample&#39;)){
+&nbsp;&nbsp;&nbsp; foreach($youtube_videos as $youtube_video){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo $youtube_video;
+&nbsp;&nbsp;&nbsp; }
+}
+
+</pre>
+<p>
+	Or you can point to a specific video to display by specifying the array index:</p>
+<pre class="brush: php">
+if($youtube_videos = mtbxr_videos(&#39;youtube_sample&#39;)){
+&nbsp;&nbsp;&nbsp; echo $youtube_videos[0]; //First video
+&nbsp;&nbsp;&nbsp; echo $youtube_videos[1]; //Second video
+}</pre>
+<h4>
+	&nbsp;</h4>
+<h4>
+	Date, Time and Datetime</h4>
+<p>
+	Date, time and datetime are stored as timestamp. You can use PHP&#39;s <a href="http://www.php.net/manual/en/function.date.php">date</a> function to output it to your preferred format.</p>
+<p>
+	Example 1 - Display Date:</p>
+<pre class="brush: php">
+$timestamp = mtbxr_val(&quot;my_custom_date&quot;);
+echo date(&#39;M d, Y&#39;, $timestamp);
+</pre>
+<p>
+	Will output date in this format: Oct 08, 2012. Of course the date will depend on the value of timestamp.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Example 2 - Display Time:</p>
+<pre class="brush: php">
+$timestamp = mtbxr_val(&quot;my_custom_time&quot;);
+echo date(&#39;h:i:s A&#39;, $timestamp);
+</pre>
+<p>
+	Will output time in this format: 07:25:10 AM. The time will depend on the value of timestamp.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Example 3 - Display Datetime:</p>
+<pre class="brush: php">
+$timestamp = mtbxr_val(&quot;my_custom_datetime&quot;);
+echo date(&#39;F d, Y h:i:s A&#39;, $timestamp);
+</pre>
+<p>
+	Will output something like October 08, 2012 07:28:49 AM. Output will depend on value of timestamp.</p>
+<p>
+	&nbsp;</p>
+<h4>
+	Sortable Images and Sortable Files</h4>
+<p>
+	Sortable Images and Files are stored as an array of attachment ID.</p>
+<p>
+	Example 1 - Display Images:</p>
+<pre class="brush: php">
+$images = mtbxr_val(&#39;sortable_images_sample&#39;);
+if( is_array($images) ){
+&nbsp;&nbsp;&nbsp; foreach($images as $attachment_id){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $attachment_data = wp_get_attachment_image_src( $attachment_id, &#39;large&#39; );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $image_url = $attachment_data[0];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;&lt;?php echo $image_url; ?&gt;&quot; alt=&quot;&quot; /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;?php
+&nbsp;&nbsp;&nbsp; }
+}
+</pre>
+<p>
+	Here we loop thru the attachment IDs and used WP&#39;s <a href="http://codex.wordpress.org/Function_Reference/wp_get_attachment_image_src">wp_get_attachment_image_src</a> function to fetch the url of the image.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Example 2 - Display Files:</p>
+<pre class="brush: php">
+$files = mtbxr_val(&#39;sortable_files&#39;);
+if( is_array($files) ){
+&nbsp;&nbsp;&nbsp; foreach($files as $attachment_id){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $file_url = wp_get_attachment_url( $attachment_id );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;&lt;?php echo $file_url; ?&gt;&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;?php
+&nbsp;&nbsp;&nbsp; }
+}
+</pre>
+<p>
+	Here we loop again thru the attachment IDs and used <a href="http://codex.wordpress.org/Function_Reference/wp_get_attachment_url">wp_get_attachment_url</a> function to fetch the url of the files and display it.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Tip: A very handy method in inspecting what custom fields are associated with a post is by using print_r, or better yet, WP Metaboxer&#39;s mtbxr_debug:</p>
+<pre class="brush: php">
+echo mtbxr_debug( mtbxr_all() );
+</pre>
+<p>
+	You can place this code inside your template files (eg. single.php, page.php...) preferably inside <a href="http://codex.wordpress.org/The_Loop">The Loop</a>.</p>
+<p>
+	&nbsp;</p>
+<h4>
+	Youtube and Vimeo Videos</h4>
+<p>
+	You can use mtbxr_video and mtbxr_videos function to display the videos in embedded format.&nbsp; You can also use mtbxr_all or mtbxr_val if you want to return the videos the way you entered it, that is in url format.</p>
+<p>
+	Example 1</p>
+<pre class="brush: php">
+echo mtbxr_video(&#39;vimeo_sample&#39;);
+</pre>
+<p>
+	Example 2</p>
+<pre class="brush: php">
+if($youtube_videos = mtbxr_videos(&#39;youtube_sample&#39;)){
+&nbsp;&nbsp;&nbsp; foreach($youtube_videos as $youtube_video){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo $youtube_video;
+&nbsp;&nbsp;&nbsp; }
+}</pre>
+<p>
+	Example 3 - First video, 500x300 dimension, with post ID specified</p>
+<pre class="brush: php">
+echo mtbxr_video(&#39;vimeo_sample&#39;, 0, 500, 300, $post_id); </pre>
+<p>
+	&nbsp;</p>
+</section>
+<section id="field_settings_reference">
+	<h3>Field Settings Reference</h3><hr class="notop">
+<p>
+	This section contains the description of each field settings.</p>
+<table border="1" cellpadding="1" cellspacing="1" height="354" style="width: 100%;">
+	<thead>
+		<tr>
+			<th scope="col">
+				Name</th>
+			<th scope="col">
+				Description</th>
+			<th scope="col">
+				&nbsp;Field</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Label</td>
+			<td>
+				The label of the field.</td>
+			<td>
+				All</td>
+		</tr>
+		<tr>
+			<td>
+				Unique Key</td>
+			<td>
+				Use to identify the field. This key is used to fetch the value of the field.</td>
+			<td>
+				All</td>
+		</tr>
+		<tr>
+			<td>
+				Default</td>
+			<td>
+				The default value of the field. Appears only if field value is empty.</td>
+			<td>
+				Textbox, Textarea, Select, Radio, Checkbox and Checkbox Group</td>
+		</tr>
+		<tr>
+			<td>
+				Note</td>
+			<td>
+				A piece of text that appears with the field. Useful in providing additional info, to aid the user.</td>
+			<td>
+				All</td>
+		</tr>
+		<tr>
+			<td>
+				Sanitation</td>
+			<td>
+				Can be: Allow HTML, No HTML or Raw. Only for Textboxes and Textareas.</td>
+			<td>
+				Textbox, Textarea, Sortable Textboxes</td>
+		</tr>
+		<tr>
+			<td>
+				Multiple</td>
+			<td>
+				If true, will allow multiple options to be selected. Only for Selectboxes.</td>
+			<td>
+				Select</td>
+		</tr>
+		<tr>
+			<td>
+				Options</td>
+			<td>
+				<p>
+					Value - The value of an option that gets saved.</p>
+				<p>
+					Text - The text displayed to the user for an option.</p>
+				<p>
+					Only for Selectboxes and Radio</p>
+			</td>
+			<td>
+				Select, Radio</td>
+		</tr>
+		<tr>
+			<td>
+				Checkboxes</td>
+			<td>
+				<p>
+					&nbsp;Value - The value of a checkbox that gets saved.</p>
+				<p>
+					Text - The label of the checkbox</p>
+				<p>
+					Only for Checkbox Group</p>
+			</td>
+			<td>
+				Checkbox Group</td>
+		</tr>
+		<tr>
+			<td>
+				Datasource</td>
+			<td>
+				<p>
+					A callable function that returns an array of value and text to be used as options.</p>
+				<p>
+					<strong>Example Usage</strong></p>
+				<p>
+					In the metabox builder screen, type <strong>mytheme_custom_options</strong> and inside your theme&#39;s function.php create a function named <strong>mytheme_custom_options:</strong></p>
+				<pre class="brush: php">
+function mytheme_custom_options(){
+	return array(
+		array(
+			&#39;value&#39;=&gt;&#39;&#39;,
+			&#39;text&#39;=&gt;&#39;&#39;
+		),
+		array(
+			&#39;value&#39;=&gt;&#39;1&#39;,
+			&#39;text&#39;=&gt;&#39;Male&#39;
+		),
+		array(
+			&#39;value&#39;=&gt;&#39;2&#39;,
+			&#39;text&#39;=&gt;&#39;Female&#39;
+		)
+	);
+}
+
+</pre>
+				<p>
+					This will override the options you specified in the metabox builder screen.</p>
+			</td>
+			<td>
+				Select, Radio, Checkbox Group</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="field_type_reference">
+	<h3>Field Type Reference</h3><hr class="notop">
+<p>
+	This section contains the field types that can be added to your custom metabox.</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+	<thead>
+		<tr>
+			<th scope="col">
+				Field</th>
+			<th scope="col">
+				Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Textbox</td>
+			<td>
+				Allows single line text to be entered. Can allow/disallow HTML input or allow raw input.</td>
+		</tr>
+		<tr>
+			<td>
+				Textarea</td>
+			<td>
+				Allows multiline text to be entered. Can allow/disallow HTML input or allow raw input.</td>
+		</tr>
+		<tr>
+			<td>
+				Select</td>
+			<td>
+				Allows selection of a single option from a predefined list. Can be set to allow multiple option to be selected. Options can also be fetched from a datasource, a callable function that returns a formatted array of value and texts.</td>
+		</tr>
+		<tr>
+			<td>
+				Checkbox</td>
+			<td>
+				Allows checking or unchecking of a single option. Value can either be 0 or 1.</td>
+		</tr>
+		<tr>
+			<td>
+				Radio</td>
+			<td>
+				Allows selection of a single option from a predefined list. Can be set to allow multiple option to be selected. Options can also be fetched from a datasource, a callable function that returns a formatted array of value and texts.</td>
+		</tr>
+		<tr>
+			<td>
+				Date</td>
+			<td>
+				Allows input of date. Value is saved as a timestamp.</td>
+		</tr>
+		<tr>
+			<td>
+				Time</td>
+			<td>
+				Allows input of time. Value is saved as a timestamp.</td>
+		</tr>
+		<tr>
+			<td>
+				Datetime</td>
+			<td>
+				Allows input of date and time. Value is saved as a timestamp.</td>
+		</tr>
+		<tr>
+			<td>
+				Checkbox Group</td>
+			<td>
+				Multiple checkboxes that can be checked or unchecked. Option value and text can be specified. Options can also be fetched from a datasource, a callable function that returns a formatted array of value and texts.</td>
+		</tr>
+		<tr>
+			<td>
+				Sortable Images</td>
+			<td>
+				Allows uploading of new images or select already uploaded images via WP Media. Image order can be changed via drag and drop in the metabox builder screen. Stores attachment IDs of the images.</td>
+		</tr>
+		<tr>
+			<td>
+				Sortable Files</td>
+			<td>
+				Allows uploading of new files or select already uploaded files via WP Media. File order can be changed via drag and drop in the metabox builder screen. Store attachment IDs of the files.</td>
+		</tr>
+		<tr>
+			<td>
+				Sortable Textboxes</td>
+			<td>
+				Repeatable, sortable textboxes. Adds unlimited number of textboxes that can be sorted via drag drop in the metabox builder screen.</td>
+		</tr>
+		<tr>
+			<td>
+				Vimeo</td>
+			<td>
+				Repeatable, sortable vimeo videos. Just store the url</td>
+		</tr>
+		<tr>
+			<td>
+				Youtube</td>
+			<td>
+				Repeatable, sortable youtube videos. Just store the url</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="filters">
+	<h3>Filters</h3><hr class="notop">
+<p>
+	Filters allow you to easily alter the data of WP Metaboxer.</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+	<thead>
+		<tr>
+			<th scope="col">
+				Filter</th>
+			<th scope="col">
+				Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<p style="margin:0in;font-family:&quot;Cordia New&quot;;font-size:16.0pt">
+					mtbxr_select_options</p>
+			</td>
+			<td>
+				<p>
+					Filters the select options for your select boxes. That means you can have customized options served from a function inside your theme. This is similar to using a Data Source but is much more powerful. If both Data Source and this filter are present, the filter overrides the Data Source.</p>
+				<p>
+					<strong>Example Usage</strong></p>
+				<p>
+					Lets say you are building a list of countries using a select box and assign it a Unique Key &quot;countries&quot;. It would be cumbersome to use the metabox builder screen since it will be a very long list. That us where this filter becomes handy.</p>
+				<pre class="brush: php">
+function mytheme_filter_select_options($options, $field){
+&nbsp;&nbsp; &nbsp;if($field[&#39;uid&#39;]==&#39;countries&#39;){
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; $options = array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;au&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Australia&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;us&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;United States&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;uk&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;United Kingdom&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; )
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; );
+&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;return $options;
+}
+add_filter( &#39;mtbxr_select_options&#39;, &#39;mytheme_filter_select_options&#39;, 10, 2 );
+
+</pre>
+				<p>
+					You can place this code inside your functions.php. The line</p>
+				<pre class="brush: php">
+if($field[&#39;uid&#39;]==&#39;countries&#39;){</pre>
+				<p>
+					..will make sure that only this select field is filtered leaving the other select fields unchanged. Also make sure that you return the options properly:</p>
+				<pre class="brush: php">
+return $options;
+</pre>
+				<p>
+					or else no options will appear for all select fields!</p>
+				<p>
+					Note: This is just an example, the real country list is waaay longer.</p>
+				<p>
+					If using filter is complicated for you there is always the data source way. Check out the Field Settings Reference section to learn more about the data source.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p style="margin:0in;font-family:&quot;Cordia New&quot;;font-size:16.0pt">
+					mtbxr_radio_options</p>
+			</td>
+			<td>
+				<p>
+					Filters the radio options for your radio fields. That means you can have customized options served from a function inside your theme. This is similar to using a Data Source but is much more powerful. If both Data Source and this filter are present, the filter overrides the Data Source.</p>
+				<p>
+					<strong>Example Usage</strong></p>
+				<pre class="brush: php">
+function mytheme_filter_radio_options($options, $field){
+&nbsp;&nbsp; &nbsp;if($field[&#39;uid&#39;]==&#39;radio_sample&#39;){
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; $options = array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;opt1&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Option 1&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;opt2&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Option 2&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;opt3&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Option 3&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; )
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; );
+&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;return $options;
+}
+add_filter( &#39;mtbxr_radio_options&#39;, &#39;mytheme_filter_radio_options&#39;, 10, 2 );
+</pre>
+				<p>
+					You can place this code inside your functions.php. The line</p>
+				<pre class="brush: php">
+if($field[&#39;uid&#39;]==&#39;radio_sample&#39;){</pre>
+				<p>
+					..will make sure that only this select field is filtered leaving the other radio fields unchanged. Also make sure that you return the options properly:</p>
+				<pre class="brush: php">
+return $options;</pre>
+				<p>
+					or else no options will appear for all radio fields!</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p style="margin:0in;font-family:&quot;Cordia New&quot;;font-size:16.0pt">
+					mtbxr_checkbox_group_options</p>
+			</td>
+			<td>
+				<p>
+					Filters the checkboxes for your checkbox group fields. That means you can have customized checkboxes list served from a function inside your theme. This is similar to using a Data Source but is much more powerful. If both Data Source and this filter are present, the filter overrides the Data Source.</p>
+				<p>
+					<strong>Example Usage</strong></p>
+				<pre class="brush: php">
+function mytheme_filter_checkbox_group_options($options, $field){
+&nbsp;&nbsp; &nbsp;if($field[&#39;uid&#39;]==&#39;checkbox_group_sample&#39;){
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; $options = array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;1&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Checkbox 1&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;2&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Checkbox 2&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; array(
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;value&#39;=&gt; &#39;3&#39;,
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &#39;text&#39;=&gt; &#39;Checkbox 3&#39;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; )
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; );
+&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;return $options;
+}
+add_filter( &#39;mtbxr_checkbox_group_options&#39;, &#39;mytheme_filter_checkbox_group_options&#39;, 10, 2 );
+</pre>
+				<p>
+					&nbsp;</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p style="margin:0in;font-family:&quot;Cordia New&quot;;font-size:16.0pt">
+					mtbxr_field_note</p>
+			</td>
+			<td>
+				<p>
+					Filters the note for every field. Notes are displayed together with fields and provides additional info useful for the end-users.</p>
+				<p>
+					<strong>Example Usage</strong></p>
+				<pre class="brush: php">
+function mtbxr_field_notes( $note, $field ) {
+
+&nbsp;&nbsp; &nbsp;$note .= &#39; Meta Key: &#39;.esc_attr($field[&#39;uid&#39;]);
+
+&nbsp;&nbsp; &nbsp;return $note;
+}
+add_filter( &#39;mtbxr_field_note&#39;, &#39;mtbxr_field_notes&#39;, 10, 2 );
+</pre>
+				<p>
+					This filters all the note for every fields. If you want to filter a specific field you can use a conditional check:</p>
+				<pre class="brush: php">
+function mytheme_field_notes( $note, $field ) {
+&nbsp;&nbsp;&nbsp; if($field[&#39;uid&#39;] == &#39;checkbox_group_sample&#39;) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $note = &#39;Please specify the correct value...&#39;;
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; return $note;
+}
+add_filter( &#39;mtbxr_field_note&#39;, &#39;mytheme_field_notes&#39;, 10, 2 );</pre>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="utility_functions">
+	<h3>Utility Functions</h3><hr class="notop">
+<p>
+	Contain details about the utility functions. You can check the <a href="#accessing_your_data">Accessing Your Data</a> section for examples of using these functions.</p>
+<h4>
+	mtbxr_val</h4>
+<p>
+	mtbxr_val($key, $post_id=null)</p>
+<p>
+	<strong>Parameters:</strong></p>
+<p style="margin-left: 40px;">
+	string $key - Required. The uid of the field to fetch.</p>
+<p style="margin-left: 40px;">
+	int $post_id - Optional. The Post ID to fetch the custom field from.</p>
+<p>
+	Returns mixed</p>
+<p>
+	&nbsp;</p>
+<h4>
+	mtbxr_all</h4>
+<p>
+	mtbxr_all($post_id=null)</p>
+<p>
+	<strong>Parameters:</strong></p>
+<p style="margin-left: 40px;">
+	int $post_id - Optional. The Post ID to fetch the custom field from.</p>
+<p>
+	Returns array</p>
+<p>
+	&nbsp;</p>
+<h4>
+	mtbxr_debug</h4>
+<p>
+	mtbxr_debug($s)</p>
+<p>
+	<strong>Parameters:</strong></p>
+<p style="margin-left: 40px;">
+	mixed $s - Required. Any variable to print out in a readable way.</p>
+<p>
+	Returns string</p>
+<p>
+	&nbsp;</p>
+<h4>
+	mtbxr_video</h4>
+<p>
+	mtbxr_video( $key, $index=0, $width=null, $height=null, $post_id=null )</p>
+<p>
+	<strong>Parameters:</strong></p>
+<p style="margin-left: 40px;">
+	string $key - Required. The uid of the field to fetch.</p>
+<p style="margin-left: 40px;">
+	int $index - Optional. The index of the video.</p>
+<p style="margin-left: 40px;">
+	int $width - Optional. The width of the embedded video.</p>
+<p style="margin-left: 40px;">
+	int $height - Optional. The height of the embedded video.</p>
+<p style="margin-left: 40px;">
+	int $post_id - Optional. The Post ID to fetch the custom field from.</p>
+<p>
+	Returns string</p>
+<p>
+	&nbsp;</p>
+<h4>
+	mtbxr_videos</h4>
+<p>
+	mtbxr_videos( $key, $width=null, $height=null, $post_id=null )</p>
+<p>
+	<strong>Parameters:</strong></p>
+<p style="margin-left: 40px;">
+	int $index - Optional. The index of the video.</p>
+<p style="margin-left: 40px;">
+	int $width - Optional. The width of the embedded video.</p>
+<p style="margin-left: 40px;">
+	int $height - Optional. The height of the embedded video.</p>
+<p style="margin-left: 40px;">
+	int $post_id - Optional. The Post ID to fetch the custom field from.</p>
+<p>
+	Returns array</p>
+</section>
+
+	</div>
+</body>
+</html>
